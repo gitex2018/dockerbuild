@@ -39,6 +39,10 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 +
 
+. Enabling Automated Builds on Docker Hub
+
+To enable automated builds you need to connect your Docker Hub account with your account on GitHub. Login to Docker Hub and go to Account Settings > Linked Accounts. Scroll-down to find GitHub and click on the Connect link. You will be taken through the usual OAuth process where you login to GitHub (if not already logged-in) and authorise Docker to access your GitHub repositories. If everything goes well, you should receive a notification from GitHub:
+
 
 == References
 
