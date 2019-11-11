@@ -1,0 +1,44 @@
+= Get started with Build Your Docker Images Automatically When You Push on GitHub
+
+:toc:
+
+
+A comprehensive hands-on tutorial explaining building docker image when images are push on github
+
+== Create Your GitHub Repo and Add a Dockerfile
+
++
+	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ git clone https://github.com/gitex2018/dockerbuild.git
+	Cloning into 'dockerbuild'...
+	warning: You appear to have cloned an empty repository.
+	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ ls
+	README.md   desktopApp  dockerbuild readme.adoc
+	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ cd dockerbuild/
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ ls
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ echo "FROM hellow-world" > Dockerfile
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git add Dockerfile
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git commit -m "Initial import"
+	[master (root-commit) 46b38cb] Initial import
+ 	1 file changed, 1 insertion(+)
+ 	create mode 100644 Dockerfile
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git push
+	Username for 'https://github.com': gitex2018
+	Password for 'https://gitex2018@github.com':
+	Enumerating objects: 3, done.
+	Counting objects: 100% (3/3), done.
+	Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
+	Total 3 (delta 0), reused 0 (delta 0)
+	To https://github.com/gitex2018/dockerbuild.git
+ 	* [new branch]      master -> master
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ ls
+	Dockerfile
+
++
+
+
+== References
+
+. https://www.youtube.com/watch?v=KBr_qf5G4CY&list=PLK8Vf3mU_lWpvRl3cygESsSZbnG1XdYtE&index=9&t=1157s
+. https://www.andyibanez.com/posts/rclone-basics-encryption/
+
+
