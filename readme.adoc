@@ -7,8 +7,9 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 == Create Your GitHub Repo and Add a Dockerfile
 
-The first step is, obviously, to setup your repository on GitHub
+. The first step is, obviously, to setup your repository on GitHub
 
+	cd ~
 
 +
 
