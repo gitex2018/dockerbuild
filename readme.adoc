@@ -9,15 +9,6 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 The first step is, obviously, to setup your repository on GitHub
 
-. Run brew :
-
-	cd ~
-	brew install rsync
-	brew install rclone
-
-. Config and use to set up remote site (dropbox for exp.)
-
-	rclone config
 +
 
 	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ git clone https://github.com/gitex2018/dockerbuild.git
