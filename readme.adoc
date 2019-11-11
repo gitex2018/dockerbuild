@@ -54,8 +54,40 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 	- Choose GitHub repo
 	- Set up build rules
 
-		- A "tag rule" allows Docker Hub to start building an image upon discovery of a new tag in our git repository : Source = /^[0-9.]+$/ and Docker Tag = {sourceref}
-		- A "Branch rule" allows Docker Hub to start building an image upon activity on a specific branch. Source = "Master" and Dokcer Tag = latest
+		A "tag rule" allows Docker Hub to start building an image upon discovery of a new tag in our git repository : Source = /^[0-9.]+$/ and Docker Tag = {sourceref}
+		A "Branch rule" allows Docker Hub to start building an image upon activity on a specific branch. Source = "Master" and Dokcer Tag = latest
+
+. Build your first image
+
+	Tag the current state of our git repository and push the tag back to GitHub; Docker Hub will do its magic and build an image for us
+
+
++
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git tag 1.0.0
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git push --tags
+	Total 0 (delta 0), reused 0 (delta 0)
+	To https://github.com/gitex2018/dockerbuild.git
+ 	* [new tag]         1.0.0 -> 1.0.0
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ echo "LABEL architecture=x86" >> Dockerfile
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ cat Dockerfile
+
+	FROM hello-world
+	LABEL architecture=x86
+
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git add Dockerfile
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git commit -m "Added architecture label"
+	[master fe9f37b] Added architecture label
+ 	1 file changed, 1 insertion(+)
+	MacBook-Pro-de-Lakdar-2:dockerbuild lakdar$ git push
+	Enumerating objects: 5, done.
+	Counting objects: 100% (5/5), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (2/2), done.
+	Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+	Total 3 (delta 0), reused 0 (delta 0)
+	To https://github.com/gitex2018/dockerbuild.git
+   	cd2ceb8..fe9f37b  master -> master
++
 
 
 
