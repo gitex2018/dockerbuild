@@ -9,7 +9,17 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 The first step is, obviously, to setup your repository on GitHub
 
+. Run brew :
+
+	cd ~
+	brew install rsync
+	brew install rclone
+
+. Config and use to set up remote site (dropbox for exp.)
+
+	rclone config
 +
+
 	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ git clone https://github.com/gitex2018/dockerbuild.git
 	Cloning into 'dockerbuild'...
 	warning: You appear to have cloned an empty repository.
@@ -40,7 +50,6 @@ The first step is, obviously, to setup your repository on GitHub
 
 == References
 
-. https://www.youtube.com/watch?v=KBr_qf5G4CY&list=PLK8Vf3mU_lWpvRl3cygESsSZbnG1XdYtE&index=9&t=1157s
-. https://www.andyibanez.com/posts/rclone-basics-encryption/
+. https://medium.com/better-programming/build-your-docker-images-automatically-when-you-push-on-github-18e80ece76af
 
 
