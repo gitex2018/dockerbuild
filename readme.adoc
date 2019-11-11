@@ -7,6 +7,8 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 == Create Your GitHub Repo and Add a Dockerfile
 
+The first step is, obviously, to setup your repository on GitHub
+
 +
 	MacBook-Pro-de-Lakdar-2:ContainersGen lakdar$ git clone https://github.com/gitex2018/dockerbuild.git
 	Cloning into 'dockerbuild'...
