@@ -41,7 +41,21 @@ A comprehensive hands-on tutorial explaining building docker image when images a
 
 . Enabling Automated Builds on Docker Hub
 
-To enable automated builds you need to connect your Docker Hub account with your account on GitHub. Login to Docker Hub and go to Account Settings > Linked Accounts. Scroll-down to find GitHub and click on the Connect link. You will be taken through the usual OAuth process where you login to GitHub (if not already logged-in) and authorise Docker to access your GitHub repositories. If everything goes well, you should receive a notification from GitHub:
+	To enable automated builds you need to connect your Docker Hub account with your account on GitHub. 
+	- Login to Docker Hub and go to 
+	- Account Settings > Linked Accounts.
+	- Scroll-down to find GitHub and click on the Connect link. 
+	You will be taken through the usual OAuth process where you login to GitHub (if not already logged-in) and authorise Docker to access your GitHub repositories. 
+	If everything goes well, you should receive a notification from GitHub (via email saying that A third-party OAuth application (Docker Hub Builder)  ....
+
+. create the Docker Hub repository and link it to your GitHub repository
+
+	- name your repo
+	- Choose GitHub repo
+	- Set up build rules
+		1- A "tag rule" allows Docker Hub to start building an image upon discovery of a new tag in our git repository : Source = /^[0-9.]+$/ and Docker Tag = {sourceref}
+		2- A "Branch rule" allows Docker Hub to start building an image upon activity on a specific branch. Source = "Master" and Dokcer Tag = latest
+
 
 
 == References
